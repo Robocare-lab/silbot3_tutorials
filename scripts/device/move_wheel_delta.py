@@ -24,6 +24,6 @@ def wait_wheel_prepared(publisher) :
         r.sleep()
 
 if __name__ == "__main__" :
-    rospy.init_node("wheel_move_delta", anonymous=False)
+    rospy.init_node("wheel_move_delta_python", anonymous=False)
     move_wheel()
     rospy.spin()

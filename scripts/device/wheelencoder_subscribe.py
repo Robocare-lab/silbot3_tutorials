@@ -12,6 +12,6 @@ def listen_touch() :
     subscriber = rospy.Subscriber('/DeviceNode/WheelEncoder/data', Device_WheelEncoder_Msg, callback)
 
 if __name__ == "__main__" :
-    rospy.init_node("wheelencoder_listener", anonymous=True)
+    rospy.init_node("wheelencoder_listener_python", anonymous=True)
     listen_touch()
     rospy.spin()

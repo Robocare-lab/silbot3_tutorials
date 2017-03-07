@@ -28,7 +28,7 @@ class image_converter :
         cv2.waitKey(3)
 
 if __name__ == "__main__" :
-    rospy.init_node('camera_rgb_viewer', anonymous=True)
+    rospy.init_node('rgb_image_viewer_python', anonymous=True)
     image_proc = image_converter()
     try:
         rospy.spin()

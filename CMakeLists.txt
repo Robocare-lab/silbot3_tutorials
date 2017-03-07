@@ -77,6 +77,11 @@ target_link_libraries(wheelencoder_subscribe
    ${catkin_LIBRARIES}
 )
 
+add_executable(gyrosensor_subscribe src/device/gyrosensor_subscribe.cpp)
+target_link_libraries(gyrosensor_subscribe
+   ${catkin_LIBRARIES}
+)
+
 add_executable(laserscanner_subscribe src/device/laserscanner_subscribe.cpp)
 target_link_libraries(laserscanner_subscribe
    ${catkin_LIBRARIES}
@@ -108,8 +113,8 @@ target_link_libraries(rgb_image_subscribe
    ${catkin_LIBRARIES}
 )
 
-add_executable(compressed_image_subscribe src/device/compressed_image_subscribe.cpp)
-target_link_libraries(compressed_image_subscribe
+add_executable(depth_image_subscribe src/device/depth_image_subscribe.cpp)
+target_link_libraries(depth_image_subscribe
    ${catkin_LIBRARIES}
    ${OpenCV_LIBRARIES}
 )

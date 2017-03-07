@@ -9,6 +9,6 @@ def listen_sonarsensor() :
     subscriber = rospy.Subscriber('/DeviceNode/UltraSonic/data', Device_Ultra_Msg, callback)
 
 if __name__ == "__main__" :
-    rospy.init_node("touch_listener_python", anonymous=True)
+    rospy.init_node("sonar_listener_python", anonymous=True)
     listen_sonarsensor()
     rospy.spin()
