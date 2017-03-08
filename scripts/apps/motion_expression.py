@@ -41,3 +41,4 @@ if __name__ == "__main__" :
     rospy.init_node("motion_expression_python", anonymous=False)
     expression = MotionExpression()
     expression.callMotion("office","guide","1","Hello World")
+    expression.waitExpressionFinish()
