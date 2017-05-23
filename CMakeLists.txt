@@ -63,21 +63,25 @@ include_directories(
 )
 
 add_executable(touchsensor_subscribe src/device/touchsensor_subscribe.cpp)
+add_dependencies(touchsensor_subscribe silbot3_msgs_generate_messages_cpp)
 target_link_libraries(touchsensor_subscribe
    ${catkin_LIBRARIES}
 )
 
 add_executable(sonarsensor_subscribe src/device/sonarsensor_subscribe.cpp)
+add_dependencies(sonarsensor_subscribe silbot3_msgs_generate_messages_cpp)
 target_link_libraries(sonarsensor_subscribe
    ${catkin_LIBRARIES}
 )
 
 add_executable(wheelencoder_subscribe src/device/wheelencoder_subscribe.cpp)
+add_dependencies(wheelencoder_subscribe silbot3_msgs_generate_messages_cpp)
 target_link_libraries(wheelencoder_subscribe
    ${catkin_LIBRARIES}
 )
 
 add_executable(gyrosensor_subscribe src/device/gyrosensor_subscribe.cpp)
+add_dependencies(gyrosensor_subscribe silbot3_msgs_generate_messages_cpp)
 target_link_libraries(gyrosensor_subscribe
    ${catkin_LIBRARIES}
 )
@@ -88,21 +92,25 @@ target_link_libraries(laserscanner_subscribe
 )
 
 add_executable(move_arm src/device/move_arm.cpp)
+add_dependencies(move_arm silbot3_msgs_generate_messages_cpp)
 target_link_libraries(move_arm
    ${catkin_LIBRARIES}
 )
 
 add_executable(move_head src/device/move_head.cpp)
+add_dependencies(move_head silbot3_msgs_generate_messages_cpp)
 target_link_libraries(move_head
    ${catkin_LIBRARIES}
 )
 
 add_executable(move_wheel src/device/move_wheel.cpp)
+add_dependencies(move_wheel silbot3_msgs_generate_messages_cpp)
 target_link_libraries(move_wheel
    ${catkin_LIBRARIES}
 )
 
 add_executable(control_led src/device/control_led.cpp)
+add_dependencies(control_led silbot3_msgs_generate_messages_cpp)
 target_link_libraries(control_led
    ${catkin_LIBRARIES}
 )
@@ -119,43 +127,8 @@ target_link_libraries(depth_image_subscribe
    ${OpenCV_LIBRARIES}
 )
 
-
-
 add_executable(motion_expression src/apps/motion_expression.cpp)
+add_dependencies(motion_expression silbot3_msgs_generate_messages_cpp)
 target_link_libraries(motion_expression
    ${catkin_LIBRARIES}
 )
-#############
-## Install ##
-#############
-
-# all install targets should use catkin DESTINATION variables
-# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
-
-## Mark executable scripts (Python etc.) for installation
-## in contrast to setup.py, you can choose the destination
-# install(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
-
-## Mark executables and/or libraries for installation
-# install(TARGETS silbot3_tutorials silbot3_tutorials_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
-
-## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
-
-## Mark other files for installation (e.g. launch and bag files, etc.)
-# install(FILES
-#   # myfile1
-#   # myfile2
-#   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-# )
